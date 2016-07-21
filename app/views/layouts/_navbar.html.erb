@@ -1,0 +1,44 @@
+<body>
+	<script>
+	$(function() {
+  function close() {
+    $('body').removeClass('has-active-menu');
+    setTimeout(function(){
+      $('.nav-slider').removeClass('toggling');
+    }, 500);
+  }
+  
+  function open() {
+    $('body').addClass('has-active-menu');
+    $('.nav-slider').addClass('toggling');
+  }
+  
+  $('.nav-mask').click(close);
+  $('.navbar-toggler').click(open);
+});
+	</script>
+
+
+   <nav class="navbar navbar-light bg-faded">
+   
+    <a class="navbar-brand">Law-Lor!</a>
+    <div class="nav-slider">
+      <ul class="nav navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="statutes/index">Statutes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+     <div class="nav-mask"></div>
+  </nav>
+
+</body>
